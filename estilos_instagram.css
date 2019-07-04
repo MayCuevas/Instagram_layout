@@ -101,6 +101,9 @@ fill:white;
 margin:7px;
 padding:0;
 }
+.icon-instagram:before {
+  content: "\ea92";
+}
 /*Media querys*/
 @media screen and (max-width :720px){
   .post-list{

@@ -1,0 +1,113 @@
+.body{
+  margin:0;
+  font-family: Arial;
+
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?12btow');
+  src:  url('fonts/icomoon.eot?12btow#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?12btow') format('truetype'),
+    url('fonts/icomoon.woff?12btow') format('woff'),
+    url('fonts/icomoon.svg?12btow#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*="icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bubble:before {
+  content: "\1f4ac";
+}
+.icon-heart:before {
+  content: "\1f49a";
+}
+
+
+.post{
+  cursor:pointer;
+position: relative;
+
+display:block;
+}
+.post-list{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(100px,293px));
+  justify-content: center;
+  grid-gap:28px;
+}
+.post-image{
+  margin:0;
+}
+.post-image img{
+  max-width: 100%;
+  vertical-align: top;
+}
+.post-overlay{
+  background-color: rgba(0,0,0,.4);
+  position: absolute;
+  left: 0;
+  right: 0 ;
+  bottom:0;
+  top:0;
+  display:none;
+  align-items: center;
+  justify-content:center;
+  color: white;
+  text-align: center;
+  color: white;
+}
+/* cuando poso el mouse sobre post activo el overlay*/
+.post:hover .post-overlay{
+  display:flex;
+}
+.post-likes,
+.post-comments{
+  width:80px;
+  margin:3px;
+  font-weight:bold;
+  display: flex;
+font-family: Arial;
+justify-content: center;
+align-items: center;
+
+}
+.post-commments-image{
+  color:white;
+margin:7px;
+padding:0;
+width: 70%;
+fill:white;
+}
+.path{
+  fill:white;
+}
+.post-likes-image{
+  color:white;
+margin:7px;
+padding:0;
+}
+/*Media querys*/
+@media screen and (max-width :720px){
+  .post-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(100px,293px));
+    justify-content: center;
+    grid-gap:3px;
+
+  }
+}
